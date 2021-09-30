@@ -105,6 +105,12 @@ function iterator(a) {
 // Task 3
 //--------------------------------------------------------------------------------------
 
+/**
+ * @param {dom} dom_audio - Reference to the `<audio>` element.
+ * @param {URL[]} song_urls - An Array of song URLs, whose values can be passed to the <audio src> attribute.
+ * @param {Boolean} volume - If true (default), initialize and show the volume control buttons.
+ * @return {function} A function which can be called with a new `song_urls` Array to replace the current playlist.
+ */
 function init_player(dom_audio, song_urls, volume)
 {
 }
@@ -114,6 +120,10 @@ function init_player(dom_audio, song_urls, volume)
 // Task 4
 //--------------------------------------------------------------------------------------
 
+/**
+ * @param {String} text - The mini markdown text string.
+ * @return {String} The corresponding HTML representation.
+ */
 function mini_md(text)
 {
 }
