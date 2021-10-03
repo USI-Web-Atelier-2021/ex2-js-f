@@ -19,7 +19,6 @@ function format_seconds(s) {
 }
 
 
-//They should be able to write this function on the fly
 
 
  /**
