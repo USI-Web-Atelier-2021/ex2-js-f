@@ -521,6 +521,9 @@ describe('Task 1', function() {
             "result contains at least one common element",
             "array number", "array number", "number",
             function(arr, bis, common) {
+                //shallow copy the arrays so that JSVerify doesn't crash
+                arr = [...arr];
+                bis = [...bis];
                 arr.push(common);
                 bis.push(common);
                 return propEqual((array_intersect(arr, bis).indexOf(common) >= 0), true, `array_intersect([${arr}],[${bis}])).indexOf(${common}) >= 0`, 'true');
@@ -575,6 +578,9 @@ describe('Task 1', function() {
             "result does not contain at least one common element",
             "array number", "array number", "number",
             function(arr, bis, common) {
+                //shallow copy the arrays so that JSVerify doesn't crash
+                arr = [...arr];
+                bis = [...bis];
                 arr.push(common);
                 bis.push(common);
                 return propEqual(array_difference(arr, bis).indexOf(common), -1, `array_difference([${arr}],[${bis}])).indexOf(${common})`, '-1');
@@ -583,6 +589,8 @@ describe('Task 1', function() {
             "is not symmetric",
             "array number", "array number", "number",
             function(a1, a2, extra) {
+                //shallow copy the array so that JSVerify doesn't crash
+                a1 = [...a1];
                 a1.push(extra);
                 return propNotEqual(array_difference(a1, a2), array_difference(a2, a1), `array_difference([${a1}],[${a2}])`, `array_difference([${a2}],[${a1}])`);
             });
